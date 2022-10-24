@@ -19,7 +19,9 @@ public class Producto {
 
     private Float precio;
 
-    
+    public Producto(){
+
+    }
 
     public Producto(String nombre, Float precio) {
         this.nombre = nombre;

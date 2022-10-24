@@ -62,7 +62,7 @@ public class ProductoController {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
 
-        if(productoDto.getPrecio() < 0 ){
+        if(productoDto.getPrecio() == null ||  productoDto.getPrecio() < 0){
             return new ResponseEntity(new Mensaje("El precio debe ser mayor a 0"), HttpStatus.BAD_REQUEST);
         }
 
@@ -80,7 +80,7 @@ public class ProductoController {
     public ResponseEntity<?> update(@PathVariable("id") int id, 
                                     @RequestBody ProductoDto productoDto){
 
-        if(productoService.existsById(id)){
+        if(!productoService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el producto"), HttpStatus.BAD_REQUEST);
         }   
 
@@ -93,7 +93,7 @@ public class ProductoController {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
 
-        if(productoDto.getPrecio() < 0 ){
+        if(productoDto.getPrecio() == null || productoDto.getPrecio() < 0 ){
             return new ResponseEntity(new Mensaje("El precio debe ser mayor a 0"), HttpStatus.BAD_REQUEST);
         }
 
@@ -108,7 +108,7 @@ public class ProductoController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
      
-        if(productoService.existsById(id)){
+        if(!productoService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el producto"), HttpStatus.BAD_REQUEST);
         }   
         productoService.delete(id);
