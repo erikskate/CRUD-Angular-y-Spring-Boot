@@ -1,11 +1,11 @@
-package com.crud.repository;
+package com.crud.crud.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.crud.entity.Producto;
+import com.crud.crud.entity.Producto;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto,Integer>{

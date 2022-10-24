@@ -1,8 +1,6 @@
-package com.crud.controller;
+package com.crud.crud.controller;
 
 import java.util.List;
-
-import javax.xml.ws.Response;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.crud.dto.Mensaje;
-import com.crud.dto.ProductoDto;
-import com.crud.entity.Producto;
-import com.crud.service.ProductoService;
+import com.crud.crud.dto.Mensaje;
+import com.crud.crud.dto.ProductoDto;
+import com.crud.crud.entity.Producto;
+import com.crud.crud.service.ProductoService;
 
 @RestController
 @RequestMapping("/producto")
