@@ -1,1 +1,22 @@
-<p>detalle-producto works!</p>
+<div class="container">
+
+    <div class="row mt-5" *ngIf="producto">
+        <div class="col-md4 mx-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                  Detalle
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>ID: </b>{{producto.id}}</li>
+                  <li class="list-group-item"><b>Nombre: </b>{{producto.nombre}}</li>
+                  <li class="list-group-item"><b>Precio: </b>{{producto.precio}} $</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><li class="fa fa-arrow-alt-circle-left"></li> Volver</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

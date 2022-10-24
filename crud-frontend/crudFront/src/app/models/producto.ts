@@ -7,6 +7,5 @@ export class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
-    
 }
 
